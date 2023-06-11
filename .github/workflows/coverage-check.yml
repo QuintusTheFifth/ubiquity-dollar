@@ -10,7 +10,7 @@ jobs:
     name: Compare Test Coverage
     runs-on: ubuntu-22.04
     permissions:
-      contents: read
+      contents: read 
 
     steps:
       - name: Checkout development branch
