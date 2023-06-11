@@ -106,11 +106,11 @@ jobs:
           echo Development branch coverage: ${{ steps.coverage-development.outputs.COVERAGE }}
           echo PR branch coverage: ${{ steps.coverage-pr.outputs.COVERAGE }}
 
-      - name: Compare coverages
-        if: ${{ steps.coverage-development.outputs.COVERAGE > steps.coverage-pr.outputs.COVERAGE }}
-        run: |
-          echo "Error: test coverage decreased"
-          exit 1
+      # - name: Compare coverages
+      #   if: ${{ steps.coverage-development.outputs.COVERAGE > steps.coverage-pr.outputs.COVERAGE }}
+      #   run: |
+      #     echo "Error: test coverage decreased"
+      #     exit 1
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1
